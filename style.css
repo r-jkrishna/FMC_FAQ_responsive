@@ -1,0 +1,246 @@
+/* 
+============
+fonts
+============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* 
+=============
+variables
+=============
+*/
+:root {
+  /* colors */
+  --clr-blue-veryDarkSat: hsl(238, 29%, 16%);
+  --clr-red-soft: hsl(14, 88%, 65%);
+  --clr-voiet-soft: hsl(273, 75%, 66%);
+  --clr-blue-soft: hsl(240, 73%, 65%);
+  --clr-blue-veryDarkGrayish: hsl(237, 12%, 33%);
+  --clr-blue-daryGrayish: hsl(240, 6%, 50%);
+  --clr-blue-lightGrayish: hsl(240, 5%, 91%);
+  /* topology */
+  --font-size: 0.75rem;
+  --ff-primary: "Kumbh Sans", sans-serif;
+  --radius: 1rem;
+}
+/* 
+============
+gobal
+============
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+  padding-top: 10px auto 10px auto;
+  height: 100vh;
+
+  font-family: var(--ff-primary);
+  font-size: var(--font-size);
+  background: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+}
+h1 {
+  font-weight: 700;
+  color: var(--clr-blue-veryDarkSat);
+}
+p {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+button {
+  border: none;
+  background: none;
+}
+@media screen and (min-width: 786px) {
+  body {
+    padding: 9rem 0;
+    height: 100vh;
+    background-repeat: no-repeat;
+  }
+}
+/* 
+=================
+container
+=================
+*/
+.container {
+  margin: 7.5rem auto 0 auto;
+  padding-bottom: 2rem;
+  width: 90vw;
+  min-width: 337.5px;
+  background-color: white;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0 10px 50px -20px;
+}
+@media screen and (min-width: 786px) {
+  .container {
+    margin: auto;
+    padding: 0;
+    max-width: 864px;
+    height: 70vh;
+    max-height: 460px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/* 
+==========
+logo
+==========
+*/
+.logo {
+  height: 16.5vh;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 3rem 0;
+}
+.women {
+  height: 190%;
+  width: 100%;
+  margin: 0;
+  background-image: url(./images/illustration-woman-online-mobile.svg);
+  background-repeat: no-repeat;
+  position: relative;
+  left: 1.5rem;
+  top: -7rem;
+}
+.box {
+  visibility: hidden;
+}
+@media screen and (min-width: 786px) {
+  .logo {
+    height: 100%;
+    width: 45%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url(./images/illustration-woman-online-desktop.svg),
+      url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 115%, 230%;
+    background-position: -5rem 4.5rem, -33rem -17rem;
+  }
+  .women {
+    display: none;
+    visibility: hidden;
+    height: 80vh;
+  }
+  .box {
+    visibility: visible;
+    height: 30%;
+    width: 30%;
+  }
+  .box-img {
+    height: 145%;
+    position: relative;
+    left: -9rem;
+    top: 11.5rem;
+  }
+}
+/* 
+==========
+FAQ
+==========
+*/
+.fqa-container {
+  height: 80%;
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 786px) {
+  .fqa-container {
+    margin: 0;
+    width: 45%;
+  }
+}
+.faq {
+  margin: 1rem 0;
+  text-align: center;
+}
+@media screen and (min-width: 786px) {
+  .faq {
+    text-align: left;
+  }
+}
+/* questions */
+.q {
+  width: 100%;
+  color: var(--clr-blue-veryDarkSat);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.q:hover,
+.q:focus {
+  color: var(--clr-red-soft);
+  cursor: pointer;
+}
+@media screen and (min-width: 786px) {
+  .q {
+    width: 80%;
+  }
+}
+.qClick {
+  font-weight: 700;
+}
+/* answers */
+.a {
+  display: none;
+}
+.aO {
+  width: 80%;
+  color: var(--clr-blue-daryGrayish);
+  display: block;
+}
+/* 
+=========
+arrow
+=========
+*/
+.arrow {
+  align-content: center;
+}
+.up {
+  transform: rotate(180deg);
+}
+/* 
+============
+divider
+============
+*/
+.divider {
+  width: 80%;
+  margin: 1rem 0;
+  height: 2px;
+  background-color: var(--clr-blue-lightGrayish);
+}
+/* 
+=================
+attribution
+=================
+*/
+.attribution {
+  width: 100vw;
+  position: relative;
+  text-align: center;
+  bottom: -2rem;
+}
